@@ -1,4 +1,4 @@
-# Tesla_Clone Clone with REACT
+# Tesla Clone Clone with REACT
 
 #### PREREQUISITES:
 - Install Node JS in your computer <a href='https://nodejs.org/en/'>HERE</a>
