@@ -1,7 +1,23 @@
-# Tesla Clone Clone with REACT
+# Tesla Clone with REACT
+
+### <a href="https://tesla-clone-ae3e4.firebaseapp.com" target="_blank">🔴 LIVE DEMO</a>
 
 #### PREREQUISITES:
+- Sign up for a Firebase account <a href='https://firebase.google.com'>HERE</a>
 - Install Node JS in your computer <a href='https://nodejs.org/en/'>HERE</a>
+- Download all the images <a href='https://drive.google.com/drive/folders/1mJCPqriRujf7Lf43R3YP1A9h9qbAYBYa?usp=sharing'>HERE</a>
+
+<a href="#facebook"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="Facebook" width="30" height="30" /></a>
+<a href="#google"><img src="https://user-images.githubusercontent.com/99184393/180459460-36cf25b6-8654-4795-8e0c-1b2e9a8a2070.png" alt="Google" width="30" height="30" /></a>
+<a href="#instagram"><img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg" alt="Instagram" width="30" height="30" /></a>
+<a href="#google"><img src="https://user-images.githubusercontent.com/99184393/177784603-d69e9d02-721a-4bce-b9b3-949165d2edeb.png" alt="Google" width="30" height="30" /></a>
+<a href="#google"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/social/google.svg" alt="Google" width="30" height="30" /></a>
+<a href="#google"><img src="https://user-images.githubusercontent.com/99184393/180461713-76c02155-35f5-497e-b3a3-364fec13da39.png" alt="Google" width="30" height="30" /></a>
+<a href="#google"><img src="https://user-images.githubusercontent.com/99184393/180462270-ea4a249c-627c-4479-9431-5c3fd25454c4.png" alt="Google" width="30" height="30" /></a>
+<a href="#github"><img src="https://github.githubassets.com/images/modules/logos_page/Octocat.png" alt="GitHub" width="30" height="30" /></a>
+<a href="#github"><img src="https://raw.githubusercontent.com/atulmy/oauth/master/web/public/images/tech/github.svg" alt="GitHub" width="30" height="30" /></a>
+<a href="#github"><img src="https://drive.google.com/uc?export=download&id=1iz_mokp2bqP1G6YEsNVDu5a0FzM7SG1s" alt="GitHub" width="30" height="30" /></a>
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -51,38 +67,38 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ```
-npm install --global yarn
+npm add styled-components
 ```
 ```
-yarn add styled-components
-```
-```
-npm install -f react-reveal --save
+npm install react-reveal --save
 ```
 
-#### flip-move
+#### Flip Move
 ```
-npm i -S react-flip-move   
+npm i react-flip-move   
 ```
+<div style="display: inline_block"><br>
+    <img align="center" alt="React" height="150"  src="https://reactjsexample.com/content/images/2020/10/simpleshuffle.gif">
+ </div>
 
 ## Available MATERIAL-UI Scripts
-find ----> https://v4.mui.com/
+<a href="https://v4.mui.com/">Find</a>
 
 ```
-npm install -f @material-ui/core
+npm install @material-ui/core
 ```
 ```
-npm install -f @material-ui/icons
+npm install @material-ui/icons
 ```
-## Available MATERIAL-UI Scripts
-log in -----> https://firebase.google.com/?gclid=CjwKCAjwwdWVBhA4EiwAjcYJEJgGMjrNU4-3-B_y4t75X_98NqlIFJH0-iyVB-5GPQvLm-kihLaerhoCZNYQAvD_BwE&gclsrc=aw.ds <br>
+## Firebase
+<a href="https://firebase.google.com/?gclid=CjwKCAjwwdWVBhA4EiwAjcYJEJgGMjrNU4-3-B_y4t75X_98NqlIFJH0-iyVB-5GPQvLm-kihLaerhoCZNYQAvD_BwE&gclsrc=aw.ds">log in</a>
 ```
 npm install firebase
 ```
 ```
 npm install -g firebase-tools
 ```
-find info ----> https://dev.to/farazamiruddin/react-firebase-add-firebase-to-a-react-app-4nc9
+<a href="https://dev.to/farazamiruddin/react-firebase-add-firebase-to-a-react-app-4nc9">Find Info</a>
 ```
 firebase init hosting
 ```
@@ -92,3 +108,4 @@ npm run build
 ```
 firebase deploy
 ```
+![image](https://user-images.githubusercontent.com/99184393/181190755-90b1f86c-1b12-495b-86ed-f39e2fd9b434.png)
