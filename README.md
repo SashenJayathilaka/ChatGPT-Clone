@@ -108,4 +108,5 @@ npm run build
 ```
 firebase deploy
 ```
-![image](https://user-images.githubusercontent.com/99184393/181190755-90b1f86c-1b12-495b-86ed-f39e2fd9b434.png)
+
+<a href="https://tesla-clone-ae3e4.firebaseapp.com" target="_blank">![image](https://user-images.githubusercontent.com/99184393/181190755-90b1f86c-1b12-495b-86ed-f39e2fd9b434.png)</a>
