@@ -4,7 +4,8 @@
 
   <h1>ChatGPT Clone with React.JS</h1>
   
-  <p>ChatGPT Clone with REACT! (Next.js 13, Firebase, Tailwind CSS, TypeScript, API endpoints in Next.js, ChatGPT models, Dynamic page routing in Next.js 13, App folder structure, NextAuth.js, Google Authentication)
+  <p>
+ChatGPT Clone with REACT! (Next.js 13, Firebase, Tailwind CSS, TypeScript, API endpoints in Next.js, ChatGPT models, Dynamic page routing in Next.js 13, App folder structure, NextAuth.js, Google Authentication)
   </p>
   
   
