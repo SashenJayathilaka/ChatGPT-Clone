@@ -1,7 +1,7 @@
 import bodyParser from "body-parser";
 import cors from "cors";
 import dotenv from "dotenv";
-import express from "express";
+import express, { Request, Response } from "express";
 import helmet from "helmet";
 import morgan from "morgan";
 import projectRoutes from "./routes/projectRoutes";
@@ -9,6 +9,7 @@ import searchRoutes from "./routes/searchRoutes";
 import taskRoutes from "./routes/taskRoute";
 import userRoutes from "./routes/userRoutes";
 import teamRoutes from "./routes/teamRoutes";
+import { PrismaClient } from "@prisma/client/extension";
 
 dotenv.config();
 
