@@ -137,3 +137,32 @@ export const priorityColumns: GridColDef[] = [
     renderCell: (params) => params.value?.username || "Unassigned",
   },
 ];
+
+export const formFields = {
+  signUp: {
+    username: {
+      order: 1,
+      placeholder: "Choose a username",
+      label: "Username",
+      inputProps: { required: true },
+    },
+    email: {
+      order: 1,
+      placeholder: "Enter your email address",
+      label: "Email",
+      inputProps: { type: "email", required: true },
+    },
+    password: {
+      order: 3,
+      placeholder: "Enter your password",
+      label: "Password",
+      inputProps: { type: "password", required: true },
+    },
+    confirm_password: {
+      order: 4,
+      placeholder: "Confirm your password",
+      label: "Confirm Password",
+      inputProps: { type: "password", required: true },
+    },
+  },
+};
