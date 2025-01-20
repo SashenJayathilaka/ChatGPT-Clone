@@ -1,7 +1,7 @@
 "use client";
 
 import { dataGridClassNames, dataGridSxStyles } from "@/lib/utils";
-import { useGetTasksByUserQuery } from "@/state/api";
+import { useGetAuthUserQuery, useGetTasksByUserQuery } from "@/state/api";
 import { Priority, TasksTypes } from "@/types/type";
 import { DataGrid } from "@mui/x-data-grid";
 import { useState } from "react";
@@ -18,8 +18,10 @@ type Props = {
 function PriorityPage({ priority }: Props) {
   const [view, setView] = useState("list");
   const [isMobileNewTaskOpen, setIsMobileNewTaskOpen] = useState(false);
+  const { data: currentUser } = useGetAuthUserQuery({});
 
-  const userId = 1;
+  const userId = Number(currentUser?.user?.userId) ?? null;
+
   const {
     data: task,
     isLoading,
