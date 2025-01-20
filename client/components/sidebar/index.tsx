@@ -1,6 +1,8 @@
 "use client";
 
-import { useGetProjectsQuery } from "@/state/api";
+import { setIsSidebarCollapsed } from "@/state";
+import { useGetAuthUserQuery, useGetProjectsQuery } from "@/state/api";
+import { signOut } from "aws-amplify/auth";
 import {
   AlertCircle,
   AlertOctagon,
@@ -25,7 +27,6 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useAppSelector } from "../wrapper/redux";
-import { setIsSidebarCollapsed } from "@/state";
 
 type Props = {};
 
@@ -36,9 +37,22 @@ function SideBar({}: Props) {
 
   const { data: projects } = useGetProjectsQuery();
 
+  const { data: currentUser } = useGetAuthUserQuery({});
+
+  const handleSignOut = async () => {
+    try {
+      await signOut();
+    } catch (error: any) {
+      console.log("🚀 ~ handleSignUp ~ error:", error);
+    }
+  };
+
   const isSidebarCollapsed = useAppSelector(
     (state) => state.global.isSidebarCollapsed,
   );
+
+  if (!currentUser) return null;
+  const currentUserDetails = currentUser.user;
 
   const sideBarClassNames = `fixed flex flex-col h-[100%] justify-between shadow-xl
     transition-all duration-300 h-full z-40 dark:bg-black overflow-y-auto bg-white ${isSidebarCollapsed ? "w-0 hidden" : "w-64"}`;
@@ -139,6 +153,22 @@ function SideBar({}: Props) {
             />
           </>
         )}
+      </div>
+      <div className="z-10 mt-32 flex w-full flex-col items-center gap-4 bg-white px-8 py-8 dark:bg-black md:hidden">
+        <div className="flex w-full items-center">
+          <div className="align-center flex h-9 w-9 justify-center">
+            <User className="h-6 w-6 cursor-pointer self-center rounded-full dark:text-white" />
+          </div>
+          <span className="mx-3 text-gray-800 dark:text-white">
+            {currentUserDetails?.username}
+          </span>
+          <button
+            className="self-start rounded bg-blue-400 px-4 py-2 text-xs font-bold text-white hover:bg-blue-500 md:block"
+            onClick={handleSignOut}
+          >
+            Sign out
+          </button>
+        </div>
       </div>
     </div>
   );

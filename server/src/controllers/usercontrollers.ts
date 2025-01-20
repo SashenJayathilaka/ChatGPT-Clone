@@ -12,6 +12,21 @@ export const getUsers = async (req: Request, res: Response): Promise<void> => {
   }
 };
 
+export const getUser = async (req: Request, res: Response): Promise<void> => {
+  const { cognitoId } = req.params;
+
+  try {
+    const users = await prisma.user.findUnique({
+      where: {
+        cognitoId: cognitoId,
+      },
+    });
+    res.json(users);
+  } catch (error: any) {
+    res.status(500).json({ error: `Failed to fetch user ${error.message}` });
+  }
+};
+
 export const postUser = async (req: Request, res: Response) => {
   try {
     const {
