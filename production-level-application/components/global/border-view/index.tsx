@@ -1,7 +1,6 @@
 import { useGetTasksQuery, useUpdateTasksMutation } from "@/state/api";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import { toast } from "react-toastify";
 import { Spinner } from "../loader/spinner";
 import TaskColumn from "../task-column";
 
@@ -15,30 +14,10 @@ const taskStatus = ["To Do", "Work In Progress", "Under Review", "Completed"];
 function BorderView({ id, setIsModelNewTasOpen }: Props) {
   const { data: tasks, isLoading, error } = useGetTasksQuery({ projectId: id });
 
-  const [updateTaskStatus, { data }] = useUpdateTasksMutation();
+  const [updateTaskStatus] = useUpdateTasksMutation();
 
   const moveTask = (taskId: number, toStatus: string) => {
-    const toastId = toast.loading("Updating task status...", {
-      position: "bottom-right",
-    });
-
-    try {
-      updateTaskStatus({ taskId, status: toStatus });
-
-      toast.update(toastId, {
-        render: "Task status updated successfully!",
-        type: "success",
-        isLoading: false,
-        autoClose: 2000, // Auto-close after 3 seconds
-      });
-    } catch (error: any) {
-      toast.update(toastId, {
-        render: "Failed to update task status. Please try again.",
-        type: "error",
-        isLoading: false,
-        autoClose: 5000, // Auto-close after 5 seconds
-      });
-    }
+    updateTaskStatus({ taskId, status: toStatus });
   };
 
   if (isLoading) return <Spinner />;
