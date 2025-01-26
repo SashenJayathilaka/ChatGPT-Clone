@@ -6,18 +6,18 @@ import { ProjectTypes } from "@/types/type";
 import { useUser } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 import BorderView from "../border-view";
+import ClientOnly from "../client-only";
 import ListView from "../list-view";
 import ProjectHeader from "../project-header";
 import TableView from "../table-view";
 import Timeline from "../timeline-view";
-import ClientOnly from "../client-only";
 
 type Props = {
   id: string;
 };
 
 function ProjectPage({ id }: Props) {
-  const { isSignedIn, user, isLoaded } = useUser();
+  const { user } = useUser();
   const [activeTAB, setActiveTAB] = useState("Board");
   const [filterData, setFilterData] = useState<ProjectTypes>();
   const [isModelNewTasOpen, setIsModelNewTasOpen] = useState(false);
@@ -27,7 +27,7 @@ function ProjectPage({ id }: Props) {
   useEffect(() => {
     const filterData = projects?.find((p) => String(p.id) === String(id));
     setFilterData(filterData);
-  }, [id]);
+  }, [id, projects]);
 
   return (
     <div>
