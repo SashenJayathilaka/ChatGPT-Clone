@@ -1,0 +1,48 @@
+{
+  "name": "pm-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@clerk/nextjs": "^6.9.14",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
+    "@mui/material": "^6.4.1",
+    "@mui/x-data-grid": "^7.24.0",
+    "@prisma/client": "^6.2.1",
+    "@reduxjs/toolkit": "^2.5.0",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^12.0.5",
+    "gantt-task-react": "^0.3.9",
+    "lodash": "^4.17.21",
+    "lucide-react": "^0.473.0",
+    "next": "14.2.7",
+    "next-cloudinary": "^6.16.0",
+    "react": "^18",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18",
+    "react-redux": "^9.2.0",
+    "react-toastify": "^11.0.3",
+    "recharts": "^2.15.0",
+    "redux-persist": "^6.0.0",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.17.14",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.7",
+    "postcss": "^8",
+    "prisma": "^6.2.1",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}
