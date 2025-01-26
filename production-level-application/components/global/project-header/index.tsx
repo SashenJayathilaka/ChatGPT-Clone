@@ -40,16 +40,13 @@ function ProjectHeader({
   userId,
   projectsUserId,
 }: Props) {
-  if (!userId) {
-    return <p>User ID is required.</p>; //TODO: Or any other fallback UI
-  }
   const router = useRouter();
-
-  const { data: user, error } = useGetUserQuery({ userId });
+  const { data: user, error } = useGetUserQuery({
+    userId: userId ?? "defaultUserId",
+  });
   const [deleteProject] = useDeleteProjectMutation();
   const [removeUsers, { error: removeUser }] = useRemoveUserFromTaskMutation();
   const [sharedProjectId, setSharedProjectId] = useState("");
-
   const [isModalNameProjectOpen, setIsModalNameProjectOpen] = useState(false);
   const [isModelShareProjectOpen, setIsModelShareProjectOpen] = useState(false);
 

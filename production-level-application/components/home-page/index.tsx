@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { dataGridClassNames, dataGridSxStyles } from "@/lib/utils";
@@ -199,7 +200,7 @@ function HomePage({ projectId, project }: Props) {
             className="w-[500px]"
           />
           <p className="text-black dark:text-white text-lg font-semibold mt-4">
-            Currently You Don't have Task
+            {`Currently You Don't have Task`}
           </p>
         </div>
       )}
