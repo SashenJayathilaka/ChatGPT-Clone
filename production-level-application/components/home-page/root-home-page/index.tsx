@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import ModalNewProject from "@/components/modal/modal-new-project";
@@ -29,12 +30,19 @@ function RootHomePage({}: Props) {
         });
       }
     },
-    [user?.id]
+    [
+      createUser,
+      user?.firstName,
+      user?.id,
+      user?.imageUrl,
+      user?.lastName,
+      user?.username,
+    ]
   );
 
   useEffect(() => {
     createCurrentUser();
-  }, [user?.id]);
+  }, [createCurrentUser, user?.id]);
 
   return (
     <div>
@@ -48,7 +56,7 @@ function RootHomePage({}: Props) {
             className="w-[500px]"
           />
           <p className="text-black dark:text-white text-lg font-semibold mt-4">
-            Currently You Don't have Project
+            {`Currently You Don't have Project`}
           </p>
           <div className="flex justify-center mt-4 gap-x-2">
             <ModalNewProject

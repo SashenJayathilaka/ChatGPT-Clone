@@ -19,10 +19,9 @@ type Props = {
 };
 
 function ModelNewTask({ id, userId, isOpen, onClose }: Props) {
-  if (!userId) {
-    return <p>User ID is required.</p>; // Or any other fallback UI
-  }
-  const { data: user, error } = useGetUserQuery({ userId });
+  const { data: user, error } = useGetUserQuery({
+    userId: userId ?? "defaultUserId",
+  });
   const [createTask, { isLoading }] = useCreateTasksMutation();
   const [refetchTasks] = useLazyGetTasksQuery();
   const [title, setTitle] = useState("");
